@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mayank's Freelance Portfolio
+
+A high-end, conversion-focused freelance portfolio website built with Next.js (App Router), Tailwind CSS, and Framer Motion.
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## How to Edit Content
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+All dynamic content is centralized in **`src/data/portfolio.ts`**. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Projects**: To update your case studies or add new ones (like the NewCycl project), edit the `projects` array.
+- **Pricing**: To update your rates, edit the `pricing` array.
+- **Hero & About text**: Update `heroData` and `aboutData`.
+- **Contact**: Update `contactInfo` with your latest WhatsApp number or Email.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design System
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This site uses a **Liquid Glass** dark premium aesthetic. 
+- Backgrounds are primarily deep black (`#09090B`).
+- Cards use a translucent glass effect (`bg-black/40` or `bg-zinc-900/60` over a blur) to ensure 4.5:1 text contrast while maintaining a glossy feel.
+- Global styles and CSS variables are located in `src/app/globals.css`.
+- Fonts (Space Grotesk and Inter) are configured in `src/app/layout.tsx`.
