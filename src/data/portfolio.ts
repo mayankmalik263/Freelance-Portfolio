@@ -1,11 +1,3 @@
-import { 
-  Globe, 
-  CalendarDays, 
-  MessageCircle, 
-  Bot, 
-  Code2 
-} from "lucide-react";
-
 export const contactInfo = {
   whatsapp: "918199082861",
   email: "mayankmalik263@gmail.com",
@@ -19,29 +11,37 @@ export const heroData = {
 
 export const services = [
   {
-    title: "Business Websites",
-    description: "Fast, mobile-first, and SEO-ready websites that rank and convert.",
-    icon: Globe,
+    title: "AI & LLM Application Development",
+    whatIBuild: "Custom AI built into real products, RAG chatbots trained on your own docs and data, multi-agent systems, and agentic workflows.",
+    youGet: "An AI agent that answers from your knowledge base (not generic ChatGPT), wired into your site or tool.",
+    proof: "MASS, a multi-agent startup simulator (LangGraph + FastAPI + Next.js).",
+    isFlagship: true
   },
   {
-    title: "Online Booking",
-    description: "Seamless service selectors and calendar integrations for your clients.",
-    icon: CalendarDays,
+    title: "Full-Stack Web Development",
+    whatIBuild: "End-to-end web apps, React/Next.js front end, FastAPI/Python back end, deployed on Vercel.",
+    youGet: "A working, deployed product, not a Figma file.",
+    proof: "MASS, Learn AI OS.",
   },
   {
-    title: "WhatsApp Automations",
-    description: "Automated reminders, review requests, and direct order flows.",
-    icon: MessageCircle,
+    title: "Interactive / Educational Web Apps",
+    whatIBuild: "Gamified, Duolingo-style learning experiences that teach a concept interactively.",
+    proof: "Learn AI OS, \"You Are a CEO\" (Personal projects).",
   },
   {
-    title: "AI Chatbots",
-    description: "Custom AI assistants trained on your data to answer customer queries 24/7.",
-    icon: Bot,
+    title: "Business Automation for Local Businesses",
+    whatIBuild: "Websites plus automation, online booking, lead capture, and AI chat support for local businesses.",
+    youGet: "A site that turns visitors into bookings and handles routine questions automatically.",
   },
   {
-    title: "Personal Portfolios",
-    description: "Built for you, or paid 1:1 coaching to learn how to build your own with AI.",
-    icon: Code2,
+    title: "Content Strategy & AI/Tech Copywriting",
+    whatIBuild: "LinkedIn content roadmaps, reel and video scripts, post templates, and viral-content analysis, tuned for AI and tech founders.",
+    framing: "The content system I run on my own channels, now offered to yours.",
+  },
+  {
+    title: "Technical Documents & Resumes",
+    whatIBuild: "AI/ML-tailored LaTeX resumes and polished PDF reports and professional docs.",
+    isSmall: true
   }
 ];
 
@@ -60,7 +60,7 @@ export const projects = [
     title: "MASS",
     description: "Complex multi-agent application featuring a premium product design.",
     proof: "I build hard apps that look high-end.",
-    link: "https://mass-sim.vercel.app/",
+    link: "/projects/mass",
     image: "/projects/mass.png", // TODO: real screenshot
   },
   {
@@ -140,6 +140,7 @@ export const pricing = [
 export const aboutData = {
   headline: "HELLO, I AM MAYANK MALIK",
   text: "B.Tech CSE (AI/ML) at UPES Dehradun. I build websites, online booking, WhatsApp automations, and AI chatbots for businesses. Currently interning at NewCycl on full-stack and AI products.",
+  photo: "/profile.png",
   education: {
     institution: "UPES Dehradun",
     degree: "B.Tech CSE (AI/ML)",
@@ -147,6 +148,7 @@ export const aboutData = {
   },
   experience: {
     company: "NewCycl (intern)",
-    role: "Full-stack web + RAG/AI chatbot work"
+    role: "Full-stack web + RAG/AI chatbot work",
+    period: "JUNE 2026 - PRESENT"
   }
 };

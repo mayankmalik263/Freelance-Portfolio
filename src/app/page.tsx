@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import DesktopIcons from "@/components/DesktopIcons";
 import About from "@/components/About";
+import LiveDemo from "@/components/LiveDemo";
 import Tools from "@/components/Tools";
 import Work from "@/components/Work";
 import Services from "@/components/Services";
@@ -14,6 +15,7 @@ export default function Home() {
       <DesktopIcons />
       <Hero />
       <About />
+      <LiveDemo />
       <Tools />
       <Work />
       <Services />
