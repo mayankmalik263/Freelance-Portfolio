@@ -52,7 +52,7 @@ export const projects = [
     description: "Live ordering site for a cafe brand. ~120 orders taken on the site instead of over the phone.",
     proof: "Real client, real result.",
     link: "https://waffleda.in/",
-    image: null, // TODO: real screenshot
+    image: "/projects/waffleda.png", // TODO: real screenshot
     isFeatured: true,
   },
   {
@@ -61,7 +61,7 @@ export const projects = [
     description: "Complex multi-agent application featuring a premium product design.",
     proof: "I build hard apps that look high-end.",
     link: "https://mass-sim.vercel.app/",
-    image: null, // TODO: real screenshot
+    image: "/projects/mass.png", // TODO: real screenshot
   },
   {
     id: "salon",
@@ -69,7 +69,7 @@ export const projects = [
     description: "Salon site with a custom service selector and WhatsApp booking integration.",
     proof: "Local-business booking systems.",
     link: "#",
-    image: null, // TODO: real screenshot
+    image: "/projects/salon.png", // TODO: real screenshot
   },
   {
     id: "learnai",
@@ -77,7 +77,7 @@ export const projects = [
     description: "Interactive learning platform with Duolingo/DataCamp-style UX.",
     proof: "Engaging, interactive product UI.",
     link: "https://learn-ai-os.vercel.app/",
-    image: null, // TODO: real screenshot
+    image: "/projects/learnai.png", // TODO: real screenshot
   },
   {
     id: "portfolio",
@@ -85,7 +85,7 @@ export const projects = [
     description: "Clean, high-end personal portfolio design.",
     proof: "I build portfolios too.",
     link: "https://mayankmalik.vercel.app/",
-    image: null, // TODO: real screenshot
+    image: "/projects/portfolio.png", // TODO: real screenshot
   }
 ];
 
@@ -138,5 +138,15 @@ export const pricing = [
 ];
 
 export const aboutData = {
-  text: "Mayank Malik, B.Tech CSE (AI/ML). I build websites and automations for businesses, and I ship fast. Currently interning at NewCycl building full-stack and AI products."
+  headline: "HELLO, I AM MAYANK MALIK",
+  text: "B.Tech CSE (AI/ML) at UPES Dehradun. I build websites, online booking, WhatsApp automations, and AI chatbots for businesses. Currently interning at NewCycl on full-stack and AI products.",
+  education: {
+    institution: "UPES Dehradun",
+    degree: "B.Tech CSE (AI/ML)",
+    years: "2024 to 2028"
+  },
+  experience: {
+    company: "NewCycl (intern)",
+    role: "Full-stack web + RAG/AI chatbot work"
+  }
 };
