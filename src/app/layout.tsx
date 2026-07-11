@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,17 +7,24 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const space = Space_Grotesk({
+  variable: "--font-space",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const jetbrains = JetBrains_Mono({
+  variable: "--font-jetbrains",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Mayank Malik | Freelance Website and Automation Developer",
-  description: "I build high-end websites, online booking systems, and WhatsApp automations for small businesses in India. Turn clicks into customers.",
+  title: "Mayank Malik | Full-Stack AI Developer & Automation Builder",
+  description: "I'm a Full-Stack AI Developer building web apps and AI-powered automations end to end.",
   openGraph: {
-    title: "Mayank Malik | Freelance Website & Automation Developer",
-    description: "I build high-end websites, online booking systems, and AI automations.",
+    title: "Mayank Malik | Full-Stack AI Developer & Automation Builder",
+    description: "I'm a Full-Stack AI Developer building web apps and AI-powered automations end to end.",
     type: "website",
   }
 };
@@ -31,10 +37,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased scroll-smooth`}
+      className={`${inter.variable} ${space.variable} ${jetbrains.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-background text-foreground selection:bg-accent/30 selection:text-white">
-        <Navbar />
+      <body className="min-h-full flex flex-col font-sans selection:bg-blue/30 selection:text-midnight">
         {children}
       </body>
     </html>
