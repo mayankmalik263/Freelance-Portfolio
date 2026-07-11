@@ -20,16 +20,16 @@ export default function RetroWindow({ title, id, children, className = "" }: Ret
     >
       {/* Title Bar */}
       <div className="retro-titlebar">
-        <span className="truncate">C:\MAYANK\{title}</span>
+        <span className="truncate">C:\MAYANK\{title}<span className="blink-caret inline-block w-1.5 h-2.5 bg-white ml-1 align-baseline"></span></span>
         <div className="retro-titlebar-buttons">
-          <div className="retro-titlebar-btn bg-white/10">
-            <svg width="8" height="2" viewBox="0 0 8 2" fill="none"><rect width="8" height="2" fill="white"/></svg>
+          <div className="retro-titlebar-btn text-black">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" className="pixel-art"><rect x="2" y="7" width="6" height="2"/></svg>
           </div>
-          <div className="retro-titlebar-btn bg-white/10">
-            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><rect x="0.5" y="0.5" width="7" height="7" stroke="white" strokeWidth="1"/></svg>
+          <div className="retro-titlebar-btn text-black">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" className="pixel-art"><path fillRule="evenodd" clipRule="evenodd" d="M1 1h8v8H1V1zm2 2h4v4H3V3z"/></svg>
           </div>
-          <div className="retro-titlebar-btn bg-red border-red text-white">
-            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 1L7 7M7 1L1 7" stroke="white" strokeWidth="1.5" strokeLinecap="round"/></svg>
+          <div className="retro-titlebar-btn text-black font-bold">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" className="pixel-art"><path d="M2 1h2v1h1v1h1V2h2v2H7v1H6v1h1v1h1v2H6V8H5V7H4v1H2V6h1V5h1V4H3V3H2V1z"/></svg>
           </div>
         </div>
       </div>
