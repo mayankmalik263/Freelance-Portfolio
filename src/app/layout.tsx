@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Inter, VT323, Press_Start_2P } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,16 +7,16 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const space = Space_Grotesk({
-  variable: "--font-space",
+const vt323 = VT323({
+  variable: "--font-vt323",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: "400",
 });
 
-const jetbrains = JetBrains_Mono({
-  variable: "--font-jetbrains",
+const pressStart = Press_Start_2P({
+  variable: "--font-press-start",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -29,6 +29,8 @@ export const metadata: Metadata = {
   }
 };
 
+import SoundWrapper from "@/components/SoundWrapper";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,9 +39,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${space.variable} ${jetbrains.variable} h-full antialiased scroll-smooth`}
+      className={`${inter.variable} ${vt323.variable} ${pressStart.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col font-sans selection:bg-blue/30 selection:text-midnight">
+        <SoundWrapper />
         {children}
       </body>
     </html>
