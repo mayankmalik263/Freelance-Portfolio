@@ -34,41 +34,29 @@ export default function Tools() {
         <RetroWindow title="tools" id="tools">
           <h3 className="text-2xl font-display font-bold text-midnight mb-6 uppercase tracking-wider">Tools & Technologies</h3>
 
-          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4">
-            {tools.map((tool) => (
-              <div
-                key={tool.name}
-                className="flex flex-col items-center gap-2 p-3 rounded-lg bg-buttercream border border-midnight/10 hover:border-blue hover:shadow-[2px_2px_0px_rgba(85,145,209,0.2)] transition-all duration-200 hover:-translate-y-0.5 group"
-                title={tool.name}
-              >
-                <img
-                  src={tool.src}
-                  alt={tool.name}
-                  className="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200"
-                />
-                <span className="text-[9px] font-bold text-midnight/60 text-center leading-tight truncate w-full">
-                  {tool.name}
-                </span>
-              </div>
-            ))}
+          <div className="retro-body">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 md:gap-4 mb-8">
+              {tools.map((tool) => (
+                <div 
+                  key={tool.name} 
+                  className="pixel-panel p-4 flex flex-col items-center justify-center gap-3 hover:-translate-y-1 transition-transform group"
+                >
+                  <img src={tool.src} alt={tool.name} className="w-8 h-8 opacity-80 group-hover:opacity-100 transition-opacity pixel-art" />
+                  <span className="text-[10px] font-bold text-midnight/70 text-center uppercase tracking-wider">{tool.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           <h3 className="text-xl font-display font-bold text-midnight mt-10 mb-4 uppercase tracking-wider">AI Stack</h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {aiTools.map((tool) => (
-              <div
-                key={tool.name}
-                className="flex flex-col items-center gap-2 p-3 rounded-lg bg-icy border border-blue/20 hover:border-blue hover:shadow-[2px_2px_0px_rgba(85,145,209,0.2)] transition-all duration-200 hover:-translate-y-0.5 group"
-                title={tool.name}
+              <div 
+                key={tool.name} 
+                className="pixel-panel p-4 flex flex-col items-center justify-center gap-3 hover:-translate-y-1 transition-transform group"
               >
-                <img
-                  src={tool.src}
-                  alt={tool.name}
-                  className="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-200"
-                />
-                <span className="text-[9px] font-bold text-midnight/80 text-center leading-tight truncate w-full">
-                  {tool.name}
-                </span>
+                <img src={tool.src} alt={tool.name} className="w-8 h-8 opacity-80 group-hover:opacity-100 transition-opacity pixel-art" />
+                <span className="text-[10px] font-bold text-midnight/70 text-center uppercase tracking-wider">{tool.name}</span>
               </div>
             ))}
           </div>

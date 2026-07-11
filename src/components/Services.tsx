@@ -8,22 +8,70 @@ export default function Services() {
       <div className="max-w-4xl mx-auto">
         <RetroWindow title="services" id="services">
           <h3 className="text-2xl font-display font-bold text-midnight mb-2 uppercase tracking-wider">What I Build</h3>
-          <p className="text-midnight/50 text-sm mb-8">High-end digital solutions designed to save you time and grow your business.</p>
+          <p className="text-midnight/70 font-semibold text-sm mb-8 leading-relaxed max-w-2xl">
+            AI engineer and full-stack builder who ships working products, not just prototypes: from RAG chatbots and multi-agent systems to the web apps they live in.
+          </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="p-5 rounded-lg bg-icy/50 border-2 border-midnight/10 hover:border-blue hover:shadow-[2px_2px_0px_rgba(85,145,209,0.2)] transition-all duration-200 hover:-translate-y-0.5 group"
-              >
-                <div className="w-12 h-12 rounded-lg bg-white border-2 border-midnight/15 flex items-center justify-center mb-4 text-blue group-hover:text-red group-hover:border-red/30 transition-colors shadow-[2px_2px_0px_rgba(40,63,118,0.1)]">
-                  <service.icon size={24} strokeWidth={2} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+            {services.map((service, idx) => {
+              // The 6th service is rendered differently
+              if (service.isSmall) return null;
+
+              return (
+                <div
+                  key={service.title}
+                  className={`pixel-panel p-5 group flex flex-col items-start ${
+                    service.isFlagship ? "border-4 border-red" : ""
+                  }`}
+                >
+                  {service.isFlagship && (
+                    <span className="pixel-button inline-block px-2 py-1 mb-4 bg-red text-white text-[10px] font-bold tracking-widest uppercase cursor-default">
+                      FLAGSHIP
+                    </span>
+                  )}
+                  <h4 className="font-display font-bold text-midnight text-lg uppercase tracking-wider mb-4 leading-tight">{service.title}</h4>
+                  
+                  <div className="space-y-4 flex-grow">
+                    <div>
+                      <span className="text-[10px] font-mono font-bold uppercase text-midnight/40 block mb-1">What I build</span>
+                      <p className="text-midnight/80 text-xs font-semibold leading-relaxed">{service.whatIBuild}</p>
+                    </div>
+
+                    {service.youGet && (
+                      <div>
+                        <span className="text-[10px] font-mono font-bold uppercase text-midnight/40 block mb-1">You get</span>
+                        <p className="text-midnight/80 text-xs font-semibold leading-relaxed">{service.youGet}</p>
+                      </div>
+                    )}
+
+                    {service.framing && (
+                      <p className="text-blue text-xs font-bold leading-relaxed">{service.framing}</p>
+                    )}
+                  </div>
+
+                  {service.proof && (
+                    <div className="mt-6 w-full pt-4 border-t-2 border-midnight/10">
+                      <span className="text-[10px] font-mono font-bold uppercase text-midnight/40 block mb-1">Proof</span>
+                      <p className="text-midnight font-bold text-xs">{service.proof}</p>
+                    </div>
+                  )}
                 </div>
-                <h4 className="font-display font-bold text-midnight text-sm uppercase tracking-wider mb-2">{service.title}</h4>
-                <p className="text-midnight/60 text-xs leading-relaxed">{service.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
+
+          {/* 6th Service: Technical Documents */}
+          {services.find(s => s.isSmall) && (
+            <div className="mt-4 p-4 pixel-panel bg-buttercream/30 flex flex-col sm:flex-row sm:items-center gap-3">
+              <span className="font-display font-bold text-midnight uppercase tracking-wider whitespace-nowrap">
+                {services.find(s => s.isSmall)?.title}
+              </span>
+              <span className="hidden sm:inline text-midnight/30 font-bold">|</span>
+              <p className="text-midnight/70 text-xs font-semibold">
+                {services.find(s => s.isSmall)?.whatIBuild}
+              </p>
+            </div>
+          )}
         </RetroWindow>
       </div>
     </div>
