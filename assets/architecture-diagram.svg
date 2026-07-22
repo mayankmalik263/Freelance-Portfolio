@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    
+    <filter id="subtleGlow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="950" height="360" rx="16" fill="#09090b" stroke="#27272a" stroke-width="2"/>
+
+  <!-- Title -->
+  <text x="475" y="35" fill="#f4f4f5" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="18" text-anchor="middle" letter-spacing="1">
+    ⚡ SYSTEM ARCHITECTURE &amp; DATA FLOW
+  </text>
+  <text x="475" y="55" fill="#a1a1aa" font-family="'Courier New', Courier, monospace" font-size="12" text-anchor="middle">
+    High-Performance Retro Terminal UI + Real-Time RAG AI Sales Proxy Engine
+  </text>
+
+  <!-- Connection Flow Line behind boxes -->
+  <path d="M 175 180 L 345 180 M 495 180 L 665 180" stroke="url(#flowGrad)" stroke-width="3" stroke-dasharray="6,6"/>
+
+  <!-- BOX 1: CLIENT FRONTEND -->
+  <g transform="translate(30, 85)">
+    <rect width="210" height="230" rx="12" fill="url(#cardGrad)" stroke="#22c55e" stroke-width="1.5" filter="url(#subtleGlow2)"/>
+    <rect width="210" height="36" rx="12" fill="#14532d"/>
+    <rect y="24" width="210" height="12" fill="#14532d"/>
+    <text x="105" y="24" fill="#4ade80" font-family="'Courier New', Courier, monospace" font-weight="bold" font-size="13" text-anchor="middle">
+      1. RETRO CLIENT UI
+    </text>
+
+    <!-- Specs inside Box 1 -->
+    <text x="15" y="62" fill="#f4f4f5" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold">• Next.js 16 App Router</text>
+    <text x="15" y="82" fill="#a1a1aa" font-family="'Segoe UI', sans-serif" font-size="11">React 19 Server &amp; Client Components</text>
+    <line x1="15" y1="95" x2="195" y2="95" stroke="#27272a"/>
+
+    <text x="15" y="115" fill="#f4f4f5" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold">• Web Audio API SFX</text>
+    <text x="15" y="135" fill="#a1a1aa" font-family="'Segoe UI', sans-serif" font-size="11">Synthesized Key Clicks &amp; Filters</text>
+    <line x1="15" y1="148" x2="195" y2="148" stroke="#27272a"/>
+
+    <text x="15" y="168" fill="#f4f4f5" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold">• Framer Motion &amp; Tailwind</text>
+    <text x="15" y="188" fill="#a1a1aa" font-family="'Segoe UI', sans-serif" font-size="11">CRT Scanline &amp; Drag Windows</text>
+    <text x="15" y="210" fill="#22c55e" font-family="'Courier New', Courier, monospace" font-size="10" font-weight="bold">[Interactive Desktop]</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <g transform="translate(245, 170)">
+    <polygon points="12,0 22,10 12,20" fill="#06b6d4"/>
+    <text x="-5" y="-10" fill="#06b6d4" font-family="'Courier New', Courier, monospace" font-size="10" font-weight="bold">Fetch Stream</text>
+  </g>
+
+  <!-- BOX 2: API ROUTE & VERCEL AI SDK -->
+  <g transform="translate(350, 85)">
+    <rect width="210" height="230" rx="12" fill="url(#cardGrad)" stroke="#06b6d4" stroke-width="1.5" filter="url(#subtleGlow2)"/>
+    <rect width="210" height="36" rx="12" fill="#0e7490"/>
+    <rect y="24" width="210" height="12" fill="#0e7490"/>
+    <text x="105" y="24" fill="#67e8f9" font-family="'Courier New', Courier, monospace" font-weight="bold" font-size="13" text-anchor="middle">
+      2. AI ROUTE HANDLER
+    </text>
+
+    <!-- Specs inside Box 2 -->
+    <text x="15" y="62" fill="#f4f4f5" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold">• /api/chat Endpoint</text>
+    <text x="15" y="82" fill="#a1a1aa" font-family="'Segoe UI', sans-serif" font-size="11">Vercel AI SDK Core Integration</text>
+    <line x1="15" y1="95" x2="195" y2="95" stroke="#27272a"/>
+
+    <text x="15" y="115" fill="#f4f4f5" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold">• Dynamic Context Inject</text>
+    <text x="15" y="135" fill="#a1a1aa" font-family="'Segoe UI', sans-serif" font-size="11">Syncs with src/data/portfolio.ts</text>
+    <line x1="15" y1="148" x2="195" y2="148" stroke="#27272a"/>
+
+    <text x="15" y="168" fill="#f4f4f5" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold">• Zero Hallucination Prompt</text>
+    <text x="15" y="188" fill="#a1a1aa" font-family="'Segoe UI', sans-serif" font-size="11">Strict proxy sales agent persona</text>
+    <text x="15" y="210" fill="#06b6d4" font-family="'Courier New', Courier, monospace" font-size="10" font-weight="bold">[Edge Streaming Endpoint]</text>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <g transform="translate(565, 170)">
+    <polygon points="12,0 22,10 12,20" fill="#a855f7"/>
+    <text x="-10" y="-10" fill="#a855f7" font-family="'Courier New', Courier, monospace" font-size="10" font-weight="bold">Groq SDK API</text>
+  </g>
+
+  <!-- BOX 3: GROQ LLAMA 3.3 LLM -->
+  <g transform="translate(670, 85)">
+    <rect width="250" height="230" rx="12" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="1.5" filter="url(#subtleGlow2)"/>
+    <rect width="250" height="36" rx="12" fill="#581c87"/>
+    <rect y="24" width="250" height="12" fill="#581c87"/>
+    <text x="125" y="24" fill="#c084fc" font-family="'Courier New', Courier, monospace" font-weight="bold" font-size="13" text-anchor="middle">
+      3. GROQ LLAMA 3.3 70B
+    </text>
+
+    <!-- Specs inside Box 3 -->
+    <text x="15" y="62" fill="#f4f4f5" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold">• Llama-3.3-70b-versatile</text>
+    <text x="15" y="82" fill="#a1a1aa" font-family="'Segoe UI', sans-serif" font-size="11">Sub-second inference speed</text>
+    <line x1="15" y1="95" x2="235" y2="95" stroke="#27272a"/>
+
+    <text x="15" y="115" fill="#f4f4f5" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold">• Sales Proxy Persona</text>
+    <text x="15" y="135" fill="#a1a1aa" font-family="'Segoe UI', sans-serif" font-size="11">Answers pricing, projects &amp; stack</text>
+    <line x1="15" y1="148" x2="235" y2="148" stroke="#27272a"/>
+
+    <text x="15" y="168" fill="#f4f4f5" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold">• Direct Conversion CTA</text>
+    <text x="15" y="188" fill="#a1a1aa" font-family="'Segoe UI', sans-serif" font-size="11">Guides users to WhatsApp / Email</text>
+    <text x="15" y="210" fill="#a855f7" font-family="'Courier New', Courier, monospace" font-size="10" font-weight="bold">[Real-Time AI Response Engine]</text>
+  </g>
+</svg>

@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c0d12"/>
+      <stop offset="100%" stop-color="#050508"/>
+    </linearGradient>
+    
+    <pattern id="termScan" width="100" height="3" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000" stroke-width="1" opacity="0.25"/>
+    </pattern>
+
+    <filter id="greenGlow">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="purpleGlow">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main Terminal Window Frame -->
+  <rect x="0" y="0" width="900" height="480" rx="12" fill="url(#termBg)" stroke="#27272a" stroke-width="2"/>
+  
+  <!-- Window Header Bar -->
+  <path d="M 0 12 Q 0 0 12 0 L 888 0 Q 900 0 900 12 L 900 40 L 0 40 Z" fill="#18181b"/>
+  <line x1="0" y1="40" x2="900" y2="40" stroke="#27272a" stroke-width="1.5"/>
+
+  <!-- Buttons -->
+  <circle cx="24" cy="20" r="6" fill="#ef4444"/>
+  <circle cx="44" cy="20" r="6" fill="#eab308"/>
+  <circle cx="64" cy="20" r="6" fill="#22c55e"/>
+
+  <!-- Window Header Text -->
+  <text x="450" y="24" fill="#a1a1aa" font-family="'Courier New', Courier, monospace" font-size="13" font-weight="bold" text-anchor="middle">
+    ROOT@MAYANK-SERVER:~ (bash) — 80x24
+  </text>
+
+  <!-- Audio & CRT Toggles Top Right -->
+  <rect x="740" y="8" width="145" height="24" rx="4" fill="#27272a"/>
+  <text x="750" y="24" fill="#22c55e" font-family="'Courier New', Courier, monospace" font-size="11" font-weight="bold">🔊 AUDIO: ON</text>
+  <text x="825" y="24" fill="#06b6d4" font-family="'Courier New', Courier, monospace" font-size="11" font-weight="bold">📺 CRT: ON</text>
+
+  <!-- Content Section -->
+  <g transform="translate(30, 70)">
+    <!-- Welcome ASCII Banner simulated -->
+    <text x="0" y="0" fill="#22c55e" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="bold" filter="url(#greenGlow)">
+      ███╗   ███╗ █████╗ ██╗   ██╗███╗   ██╗██╗  ██╗   ██████╗ ███████╗
+    </text>
+    <text x="0" y="14" fill="#22c55e" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="bold" filter="url(#greenGlow)">
+      ████╗ ████║██╔══██╗╚██╗ ██╔╝████╗  ██║██║ ██╔╝  ██╔═══██╗██╔════╝
+    </text>
+    <text x="0" y="28" fill="#22c55e" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="bold" filter="url(#greenGlow)">
+      ██╔████╔██║███████║ ╚████╔╝ ██╔██╗ ██║█████═╝   ██║   ██║███████╗
+    </text>
+    <text x="0" y="42" fill="#22c55e" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="bold" filter="url(#greenGlow)">
+      ██║╚██╔╝██║██╔══██║  ╚██╔╝  ██║╚██╗██║██╔═██╗   ██║   ██║╚════██║
+    </text>
+
+    <!-- Welcome Message -->
+    <text x="0" y="75" fill="#f4f4f5" font-family="'Courier New', Courier, monospace" font-size="13">
+      Welcome to <tspan fill="#38bdf8" font-weight="bold">Mayank Malik's Portfolio Shell v2.5</tspan>. Type <tspan fill="#eab308">'help'</tspan> for commands.
+    </text>
+
+    <!-- Command Prompt 1 -->
+    <text x="0" y="110" fill="#4ade80" font-family="'Courier New', Courier, monospace" font-weight="bold" font-size="13">
+      guest@mayank-os:~$ <tspan fill="#ffffff">cat ./services.json</tspan>
+    </text>
+    
+    <!-- Service Outputs -->
+    <text x="20" y="132" fill="#a1a1aa" font-family="'Courier New', Courier, monospace" font-size="12">
+      [1] AI &amp; LLM Application Dev <tspan fill="#22c55e">(RAG, LangGraph, Multi-Agent Systems)</tspan>
+    </text>
+    <text x="20" y="152" fill="#a1a1aa" font-family="'Courier New', Courier, monospace" font-size="12">
+      [2] Full-Stack Web Engineering <tspan fill="#38bdf8">(Next.js 16, React 19, FastAPI, Vercel)</tspan>
+    </text>
+    <text x="20" y="172" fill="#a1a1aa" font-family="'Courier New', Courier, monospace" font-size="12">
+      [3] Local Business WhatsApp &amp; Booking Automations
+    </text>
+
+    <!-- Command Prompt 2 - AI Demo Window -->
+    <g transform="translate(0, 195)">
+      <text x="0" y="20" fill="#4ade80" font-family="'Courier New', Courier, monospace" font-weight="bold" font-size="13">
+        guest@mayank-os:~$ <tspan fill="#ffffff">./ai_demo.exe --ask "What can Mayank build for my startup?"</tspan>
+      </text>
+
+      <!-- AI Response Box -->
+      <rect x="0" y="32" width="840" height="135" rx="8" fill="#111118" stroke="#a855f7" stroke-width="1.5"/>
+      
+      <!-- AI Header inside box -->
+      <path d="M 0 40 Q 0 32 8 32 L 832 32 Q 840 32 840 40 L 840 58 L 0 58 Z" fill="#1e1b4b"/>
+      <text x="14" y="50" fill="#c084fc" font-family="'Courier New', Courier, monospace" font-size="11" font-weight="bold" filter="url(#purpleGlow)">
+        🤖 GROQ LLAMA 3.3 70B RAG AGENT (STREAMING)
+      </text>
+      <text x="750" y="50" fill="#22c55e" font-family="'Courier New', Courier, monospace" font-size="10">● SYNCED WITH DATA</text>
+
+      <!-- AI Streaming Text Output -->
+      <text x="16" y="80" fill="#e9d5ff" font-family="'Courier New', Courier, monospace" font-size="12">
+        "Mayank specializes in production-ready AI tools, RAG Chatbots, and Next.js applications."
+      </text>
+      <text x="16" y="100" fill="#e9d5ff" font-family="'Courier New', Courier, monospace" font-size="12">
+        "He built MASS (Multi-Agent Startup Simulator) and WaffleDa's automated ordering engine."
+      </text>
+      <text x="16" y="120" fill="#a855f7" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="bold">
+        &gt; Type 'pricing' or click [Hire Mayank] to book a consultation instantly! ▋
+      </text>
+    </g>
+  </g>
+
+  <!-- CRT Overlay -->
+  <rect width="900" height="480" rx="12" fill="url(#termScan)" pointer-events="none"/>
+</svg>

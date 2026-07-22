@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+    
+    <!-- Neon Accent Gradient -->
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000" stroke-width="1.5" opacity="0.3"/>
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect width="1000" height="340" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2"/>
+  
+  <!-- Outer Glow Border -->
+  <rect x="2" y="2" width="996" height="336" rx="14" fill="none" stroke="url(#neonGrad)" stroke-width="2" opacity="0.8" filter="url(#subtleGlow)"/>
+
+  <!-- CRT Window Top Bar -->
+  <path d="M 2 16 Q 2 2 16 2 L 984 2 Q 998 2 998 16 L 998 42 L 2 42 Z" fill="#18181b" />
+  <line x1="2" y1="42" x2="998" y2="42" stroke="#27272a" stroke-width="1.5"/>
+
+  <!-- Window Dots -->
+  <circle cx="24" cy="22" r="6" fill="#ef4444" />
+  <circle cx="44" cy="22" r="6" fill="#eab308" />
+  <circle cx="64" cy="22" r="6" fill="#22c55e" />
+
+  <!-- Terminal Title -->
+  <text x="500" y="26" fill="#a1a1aa" font-family="'Courier New', Courier, monospace" font-weight="bold" font-size="13" text-anchor="middle" letter-spacing="2">
+    MAYANK_MALIK_OS // TERMINAL_PORTFOLIO_v2.5
+  </text>
+
+  <!-- System Badge Top Right -->
+  <rect x="850" y="12" width="130" height="20" rx="4" fill="#0284c7" opacity="0.2" stroke="#0ea5e9" stroke-width="1"/>
+  <circle cx="862" cy="22" r="4" fill="#22c55e">
+    <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <text x="874" y="26" fill="#38bdf8" font-family="'Courier New', Courier, monospace" font-weight="bold" font-size="10">SYS_ONLINE</text>
+
+  <!-- Banner Main Body Content -->
+  <!-- Left Side Visual Pixel Logo / ASCII Graphic -->
+  <g transform="translate(45, 75)">
+    <!-- Terminal Symbol Frame -->
+    <rect x="0" y="0" width="190" height="210" rx="10" fill="#000" stroke="#22c55e" stroke-width="1.5" opacity="0.9"/>
+    
+    <!-- Code prompt lines inside square -->
+    <text x="18" y="35" fill="#22c55e" font-family="'Courier New', Courier, monospace" font-weight="bold" font-size="16" filter="url(#subtleGlow)">&gt; _BOOT</text>
+    <text x="18" y="65" fill="#38bdf8" font-family="'Courier New', Courier, monospace" font-size="12">[+] NEXT.JS 16</text>
+    <text x="18" y="90" fill="#38bdf8" font-family="'Courier New', Courier, monospace" font-size="12">[+] REACT 19</text>
+    <text x="18" y="115" fill="#a855f7" font-family="'Courier New', Courier, monospace" font-size="12">[+] GROQ LLAMA</text>
+    <text x="18" y="140" fill="#eab308" font-family="'Courier New', Courier, monospace" font-size="12">[+] WEB AUDIO</text>
+    <text x="18" y="165" fill="#f43f5e" font-family="'Courier New', Courier, monospace" font-size="12">[+] TAILWIND 4</text>
+    <line x1="18" y1="180" x2="172" y2="180" stroke="#3f3f46" stroke-width="1"/>
+    <text x="18" y="197" fill="#22c55e" font-family="'Courier New', Courier, monospace" font-size="11">&gt; STATUS: 200 OK</text>
+  </g>
+
+  <!-- Center Right Headline & Description -->
+  <g transform="translate(265, 85)">
+    <!-- Main Title -->
+    <text x="0" y="35" fill="url(#neonGrad)" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="34" letter-spacing="1" filter="url(#neonGlow)">
+      MAYANK MALIK
+    </text>
+    <text x="0" y="65" fill="#f4f4f5" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="20" letter-spacing="0.5">
+      Freelance Developer &amp; AI Systems Engineer
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="95" fill="#9ca3af" font-family="'Courier New', Courier, monospace" font-size="14">
+      High-Conversion Portfolio • Retro CRT OS Aesthetic • AI RAG Proxy Agent
+    </text>
+
+    <!-- Interactive Badges visual inside header -->
+    <g transform="translate(0, 120)">
+      <!-- Badge 1: Retro Sound -->
+      <rect x="0" y="0" width="150" height="32" rx="6" fill="#18181b" stroke="#22c55e" stroke-width="1.5"/>
+      <text x="12" y="20" fill="#22c55e" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="bold">🔊 WebAudio SFX</text>
+      
+      <!-- Badge 2: AI Agent -->
+      <rect x="162" y="0" width="165" height="32" rx="6" fill="#18181b" stroke="#a855f7" stroke-width="1.5"/>
+      <text x="174" y="20" fill="#c084fc" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="bold">🤖 Groq Llama 3.3</text>
+      
+      <!-- Badge 3: Single File Config -->
+      <rect x="339" y="0" width="180" height="32" rx="6" fill="#18181b" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="351" y="20" fill="#22d3ee" font-family="'Courier New', Courier, monospace" font-size="12" font-weight="bold">⚡ portfolio.ts Config</text>
+    </g>
+
+    <!-- Terminal Prompt Line bottom -->
+    <g transform="translate(0, 175)">
+      <text x="0" y="15" fill="#4ade80" font-family="'Courier New', Courier, monospace" font-weight="bold" font-size="13">
+        user@mayank-os:~$ <tspan fill="#f4f4f5">./boot_portfolio.sh --mode=high-conversion</tspan>
+      </text>
+      <!-- Blinking Cursor -->
+      <rect x="425" y="3" width="8" height="15" fill="#4ade80">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- Overlay Scanlines -->
+  <rect width="1000" height="340" rx="16" fill="url(#scanlines)" pointer-events="none" opacity="0.4"/>
+</svg>
